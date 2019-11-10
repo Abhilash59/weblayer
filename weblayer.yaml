@@ -4,13 +4,14 @@
   user: root
   become: yes
 
- tasks:
- - name: install apache
-   yum:
+  tasks:
+  - name: install apache
+    yum:
      name: httpd
      state: present
 
- - name: start apache
-   service:
+  - name: start apache
+    service:
      name: httpd
      state: started
+ 
